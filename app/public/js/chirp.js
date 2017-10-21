@@ -10,11 +10,11 @@ $.get("/api/all", function(data) {
       var row = $("<div>");
       row.addClass("chirp");
 
-      row.append("<p class='user'>" + data[i].author + " chirped.. </p>");
-      row.append("<p class='main'>" + data[i].body + "</p>");
-      row.append("<p class='date'>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+      row.append("<p>" + data[i].author + " Said.. </p>").addClass("user"+i);
+      row.append("<p>" + data[i].body + "</p>").addClass("main"+i);
+      row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>").addClass("date"+ i);
 
-      $("#chirp-area").prepend(row);
+      $("#ayo-area").prepend(row);
 
     }
 
@@ -23,7 +23,7 @@ $.get("/api/all", function(data) {
 });
 
 // When user chirps (clicks addBtn)
-$("#chirp-submit").on("click", function(event) {
+$("#ayo-submit").on("click", function(event) {
   event.preventDefault();
 
   // Make a newChirp object
@@ -43,11 +43,11 @@ $("#chirp-submit").on("click", function(event) {
       var row = $("<div>");
       row.addClass("chirp");
 
-      row.append("<p>" + newChirp.author + " chirped: </p>");
-      row.append("<p>" + newChirp.body + "</p>");
-      row.append("<p>At " + moment(newChirp.created_at).format("h:mma on dddd") + "</p>");
+      row.append("<p>" + newChirp.author + " Said: </p>").addClass("user");
+      row.append("<p>" + newChirp.body + "</p>").addClass("main");
+      row.append("<p>At " + moment(newChirp.created_at).format("h:mma on dddd") + "</p>").addClass("date");
 
-      $("#chirp-area").prepend(row);
+      $("#ayo-area").prepend(row);
 
     });
 
