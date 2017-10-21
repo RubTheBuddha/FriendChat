@@ -35,3 +35,12 @@ p {
   margin: 0;
   font-size: 16px;
 }
+
+.main {
+  font-size: 24px;
+}
+
+.user {
+  color:#1da1f2;
+  font font-weight: bolder;
+}
