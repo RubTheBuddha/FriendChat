@@ -10,9 +10,9 @@ $.get("/api/all", function(data) {
       var row = $("<div>");
       row.addClass("chirp");
 
-      row.append("<p>" + data[i].author + " chirped.. </p>");
-      row.append("<p>" + data[i].body + "</p>");
-      row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+      row.append("<p class='user'>" + data[i].author + " chirped.. </p>");
+      row.append("<p class='main'>" + data[i].body + "</p>");
+      row.append("<p class='date'>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
 
       $("#chirp-area").prepend(row);
 

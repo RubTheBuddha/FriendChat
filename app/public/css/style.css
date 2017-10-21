@@ -1,7 +1,8 @@
 .chirp {
   padding: 10px;
   margin: 10px;
-  background-color: #e8f9ff;
+  background-color: #ecedee;
+ 
 }
 
 .cool-font {
@@ -36,11 +37,10 @@ p {
   font-size: 16px;
 }
 
-.main {
-  font-size: 24px;
+.user {
+  font-weight: bolder;
 }
 
-.user {
-  color:#1da1f2;
-  font font-weight: bolder;
+.date {
+  font-size: 10px;
 }
